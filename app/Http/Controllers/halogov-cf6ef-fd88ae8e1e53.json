@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "halogov-cf6ef",
+  "private_key_id": "fd88ae8e1e5337775ee413afc4f30e8dce74d0a6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDRA+JH6fETfMAr\nv+VAuAP0rWeAdP01vlyAo/DIv5D+X2XswTc2gxNguPKPR+RMGYd4Pju8PjhcdzTv\n8Mi91i1RZ+iCewT0Ghh4Svcn3gzX+Cf/RcRku2JUerlL/TK0jksZ+Mn9QOsMgNG/\nZfbcVIKtk/3KBM6jB/prMDxOMaKyR6ZeDN+lu0Z2Ic3yaUMO5pFSmqNrST2S2wac\nWGGatXuvfdOoVRm8ZBLFP+NgWNIri0bzYPA8ojTQ4iGsjGu/h39vmlcLDUFdQ5WR\nOLS7g7Q3Z8u9NuK0tMXw/yAgr8KuZgYZRJngeIVyXWRje0m7Z3kwULfKmaO1hFNR\naqAwYpDFAgMBAAECggEAAv2MFc0DaAZrctf+KT2IwI35+PgThsErh/A9U230OEN4\nQDMo4+se3zRXzUd9/QqKqhezDJfHGcGSqXhd/7AdbV783PlyggvDVZAP0Bgowfus\nFmzZD4gW/9AffKmwExSL5aCUdguUYVUqSxOXIzwqGd6QByPBXheqerEE7kLeo3zS\nBDTBljEU4q+GeYkYsEp6eS7b9e5IqkCnEeMxrpwUs4603YPpH6m1W0riewmMx59A\nmAQcTalOQznH6ztr/UGVCjl7XZcansYmIKnEDwOafNZoKdktW/3gs7aB22aA/pik\n/djELrKonJGl2dz4gxSVeMHjCYJu2MphaZ0IxMuSEQKBgQDzXS1uR9hpDjFq8XiZ\nTCJAny/02fMlsTMGbPSTy9qpq37QcwpI34Ka5T1YIUXBjXX0S+I4OJtXOn2U/gjh\n1wM/3Wg8T89r9E968d5X/sdSmrt6VJrWMGbdy1U1D9vYmjZ3wf83ZrGKkNXNWODY\nH3tBM8ApBjPDjxRw5p5eWzIckQKBgQDb3iNb+dh4CqFl+gbd8F7lnjwiGaGA3M4m\nScYSvswn8GsRniq9GmlONiMtcX5UuxHPaDiBcjPoZ307d6qBw7iMBANWmWwbsS0x\nUi9QcWtOgLsPm9FMyAD/er+zNAD6a1L07oKMKZRG7IslwtxNv0fDQgvzsO0IrInZ\nG9crV16a9QKBgEpXiG1L3TwabdYxdZm+vCfpeQjfG3vEKcYoun37pAx4qwCaY+Xn\nAUq4BIlLgLejswixtaVfBXUcFQjSoXv75q43wIPMDZz4wN7ZzAYtek4tnl+8QKB1\noLbYSmsvMQV19nWW+ZO+9zVRET7ti6H52/kLCgR+NInkx2XFzVMdoK1BAoGADnrG\noVwG4YDxuCGLKjqWRVDybNx7Ql1IRkU9giaGk2rF4lckQWfn33q5PljnFPVs6tfW\nQNAgkwGdwbjTxc/5616oSZ+4+unkLAdZjlap1nWr3A9K7V+OkUSoM0kNd3Bx+idq\n+YgTd8hEMaxvjb83HqjO2LGiKpwSR/YJaZVLabECgYB4ytzBUTCOKqWjCA3EoF52\nMoSqDg6MZqvXHfNPHLU4FnP8WxYK0jtkWoO1d05Sr6NaB7mvKjY0P5vRzLv5buI+\nUIzTVirMI8qdDjMHolzzNX2Tg8J/PPZduECYkW46gFz+plVn9UkzAuQ6mqLMXT9t\nRYgdKlet65RM/4YShmvT5A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-ciuaf@halogov-cf6ef.iam.gserviceaccount.com",
+  "client_id": "110188220395798702669",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ciuaf%40halogov-cf6ef.iam.gserviceaccount.com"
+}
