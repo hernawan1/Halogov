@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/firebase', 'FirebaseController@index')->name('coba');
+Route::get('/firebase', 'FirebaseController@index')->name('coba');
