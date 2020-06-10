@@ -11,9 +11,17 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function index()
     {
-        $this->middleware('auth');
+        return view('index');
+    }
+    public function home()
+    {
+        return view('user.menu.home');
+    }
+    public function mengenal()
+    {
+        return view('user.menu.mengenal-tp4d');
     }
 
     /**
@@ -21,8 +29,5 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('home');
-    }
+    
 }
