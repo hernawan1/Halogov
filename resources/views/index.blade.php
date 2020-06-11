@@ -43,6 +43,9 @@
     @yield('mekanisme')
     @yield('struktur')
     @yield('map')
+    @yield('berita')
+    @yield('detail-berita')
+    @yield('galeri')
     <!-- footer area start -->
     <footer class="footer-area">
         @include('user.footer')

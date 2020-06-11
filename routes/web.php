@@ -20,6 +20,9 @@ Route::get('/mengenal-tp4d', 'HomeController@mengenal')->name('mengenal');
 Route::get('/mekanisme-tp4d', 'HomeController@mekanisme')->name('mekanisme');
 Route::get('/strukturorganisasi', 'HomeController@struktur')->name('struktur');
 Route::get('/map', 'MapsController@index')->name('map');
+Route::get('/berita', 'BeritaController@index')->name('berita');
+Route::get('/detail-berita', 'BeritaController@detail')->name('detail-berita');
+Route::get('/galeri', 'GaleriController@index')->name('galeri');
 Route::get('/firebase', 'FirebaseController@index')->name('coba');
 
 

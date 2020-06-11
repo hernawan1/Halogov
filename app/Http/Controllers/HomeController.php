@@ -31,7 +31,18 @@ class HomeController extends Controller
     {
         return view('user.menu.struktur');
     }
-
+    public function berita()
+    {
+        return view('user.menu.berita');
+    }
+    public function detailberita()
+    {
+        return view('user.menu.detailberita');
+    }
+    public function galeri()
+    {
+        return view('user.menu.galeri');
+    }
     /**
      * Show the application dashboard.
      *
