@@ -23,6 +23,14 @@ class HomeController extends Controller
     {
         return view('user.menu.mengenal-tp4d');
     }
+    public function mekanisme()
+    {
+        return view('user.menu.mekanisme');
+    }
+    public function struktur()
+    {
+        return view('user.menu.struktur');
+    }
 
     /**
      * Show the application dashboard.

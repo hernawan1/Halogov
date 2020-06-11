@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/home', 'HomeController@home')->name('home');
 Route::get('/mengenal-tp4d', 'HomeController@mengenal')->name('mengenal');
+Route::get('/mekanisme-tp4d', 'HomeController@mekanisme')->name('mekanisme');
+Route::get('/strukturorganisasi', 'HomeController@struktur')->name('struktur');
+Route::get('/map', 'MapsController@index')->name('map');
 Route::get('/firebase', 'FirebaseController@index')->name('coba');
 
 

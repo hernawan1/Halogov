@@ -39,11 +39,11 @@
                             <a href="#">Tentang TP4D</a>
                             <ul class="sub-menu">
                                  <li><a href="{{route('mengenal')}}">Mengenal TP4D</a></li>
-                                <li><a href="mekanisme-tp4d">Mekanisme TP4D</a></li>
-                                <li><a href="struktur-organisasi">Struktur Organisasi</a></li>
+                                <li><a href="{{route('mekanisme')}}">Mekanisme TP4D</a></li>
+                                <li><a href="{{route('struktur')}}">Struktur Organisasi</a></li>
                             </ul>
                         </li>
-                        <li><a href="map">Map TP4D</a></li>
+                        <li><a href="{{route('map')}}">Map TP4D</a></li>
                         <li><a href="berita">Berita</a></li>
                         <li><a href="galeri">Galeri</a></li>
                         <li><a href=">event">Event</a></li>

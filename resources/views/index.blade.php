@@ -38,8 +38,11 @@
     <!-- top lawyer area start -->
     
     <!-- top lawyer area end -->
-   @yield('home')
+    @yield('home')
     @yield('mengenal')
+    @yield('mekanisme')
+    @yield('struktur')
+    @yield('map')
     <!-- footer area start -->
     <footer class="footer-area">
         @include('user.footer')
