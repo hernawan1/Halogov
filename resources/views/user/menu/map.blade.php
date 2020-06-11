@@ -1,10 +1,10 @@
 @extends('index')
 @section('map')
 
+ 
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAENypRbRWuuk8K18OvYOlupreDWpGvBWY&callback=initialize" type="text/javascript" >
         </script>
- 
 <!-- Theme style -->
 <style>
   .heading{
@@ -69,7 +69,7 @@ function initialize() {
   @foreach ($laporan as $pin)
   @php 
   $tgl_lapor = date('d M Y',strtotime($pin->jadwal));
-  echo ("addMarker( $pin->lat, $pin->lng");
+  echo ("addMarker( $pin->lat, $pin->lng)");
   @endphp
   @endforeach
   
