@@ -2,9 +2,6 @@
 @section('map')
 
  
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAENypRbRWuuk8K18OvYOlupreDWpGvBWY&callback=initialize" type="text/javascript" >
-        </script>
 <!-- Theme style -->
 <style>
   .heading{
@@ -56,56 +53,73 @@ height: 1000px;
 // This example displays a marker at the center of Australia.
 // When the user clicks the marker, an info window opens.
 // The maximum width of the info window is set to 200 pixels.
-
-
-function initialize() {
-  
-  var bounds = new google.maps.LatLngBounds();
-  var infoWindow = new google.maps.InfoWindow;
-  var mapOptions = { mapTypeId: google.maps.MapTypeId.ROADMAP}
-  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-  // addMarker(-7.313069, 112.728345, 'Lokasi: Disini');
-  
-  @foreach ($laporan as $pin)
-  @php 
-  $tgl_lapor = date('d M Y',strtotime($pin->jadwal));
-  echo ("addMarker( $pin->lat, $pin->lng)");
-  @endphp
-  @endforeach
-  
-  function addMarker(lat, lng) {
-            var lokasi = new google.maps.LatLng(lat, lng);
-            bounds.extend(lokasi);
-            var marker = new google.maps.Marker({
-                    map: map,
-                    animation: google.maps.Animation.BOUNCE,
-                    position: lokasi,
-                    clickable: true,
-                    icon:'icon.png'
-                
-            });       
-            map.fitBounds(bounds);
-            bindInfoWindow(marker, map, infoWindow, info, keg, pen, jad, nil);
-         }
-    function toggleBounce() {
-      if (marker.getAnimation() !== null) {
-        marker.setAnimation(null);
-      } else {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
+function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          // -7.0777326!4d113.287085
+          center: {lat: -7.0777326, lng: 113.287085}
+        });
+        setMarkers(map);
       }
-    }
-  
-  // Menampilkan informasi pada masing-masing marker yang diklik
-  function bindInfoWindow(marker, map, infoWindow, html) {
-          google.maps.event.addListener(marker, 'click', function() {
-            infoWindow.setContent(html);
-            infoWindow.open(map, marker);
+
+      var lapor= {!!json_encode($lpr)!!}
+      console.log(lapor);
+      function setMarkers(map){
+        var shape = {
+          coords: [1, 1, 1, 20, 18, 20, 18, 1],
+          type: 'poly'
+        };
+      for (var i = 0; i<lapor.length; i++){
+        var ll = lapor[i];
+        var marker = new google.maps.Marker({
+            position: {lat: ll[0], lng: ll[1]},
+            map: map,
+            icon: 'icon.png',
+            shape: shape,
           });
         }
-}
- google.maps.event.addDomListener(window, 'load', initialize);
+      }
+     
+// function initialize() {
+  
+//   var bounds = new google.maps.LatLngBounds();
+//   var infoWindow = new google.maps.InfoWindow;
+//   var mapOptions = { mapTypeId: google.maps.MapTypeId.ROADMAP}
+//   var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+//   // addMarker(-7.313069, 112.728345, 'Lokasi: Disini');
+//   // 
 
+//   function addMarker(lat, lng){
+//             var lokasi = new google.maps.LatLng(lat, lng);
+//             bounds.extend(lokasi);
+//             var marker = new google.maps.Marker({
+//                     map: map,
+//                     animation: google.maps.Animation.BOUNCE,
+//                     position: lokasi,
+//                     clickable: true,
+//                     icon:'icon.png'               
+//             });       
+//             map.fitBounds(bounds);
+//             bindInfoWindow(marker, map, infoWindow, info, keg, pen, jad, nil);
+//          }
+//     function toggleBounce() {
+//       if (marker.getAnimation() !== null) {
+//         marker.setAnimation(null);
+//       } else {
+//         marker.setAnimation(google.maps.Animation.BOUNCE);
+//       }
+//     }
+//   // Menampilkan informasi pada masing-masing marker yang diklik
+//   function bindInfoWindow(marker, map, infoWindow, html) {
+//           google.maps.event.addListener(marker, 'click', function() {
+//             infoWindow.setContent(html);
+//             infoWindow.open(map, marker);
+//           });
+//         }
+// }
 </script>
-
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAENypRbRWuuk8K18OvYOlupreDWpGvBWY&callback=initMap">
+    </script>
 
 @endsection
