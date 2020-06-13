@@ -1,57 +1,42 @@
 @extends('index')
-@section('detail-berita')
+
+@section('detail-event')
 <div class="breadcrumb-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-inner">
-                        <h2 class="page-title">Blog Details</h2>
+                        <h2 class="page-title">Event Details</h2>
                         <ul class="page-list">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="#">Blog Details</a></li>
+                            <li><a href="#">Event Details</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <div class="page-content our-attoryney padding-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="blog-details-item">
-                        <div class="thumb">
-                            <img src="{{ asset('images/'.$data->gambar) }}" alt="blog details image">
-                        </div>
-                        <h2 class="title">{{$data->judul}}</h2>
-                        <ul class="post-meta">
-                            <li><a href="#"><i class="fa fa-calendar"></i>{{$data->tanggal}}</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i>{{$data->admin_posting}}</a></li>
-                        </ul>
-                        <p>{{$data->isi}}</p>
-                      </div>
-                    <div class="blog-details-footer">
-                        <div class="left">
-                            <ul class="tags">
-                                <li class="title">Kategori : </li>
-                                <li> <a href="#" rel="tag">{{$data->kategori}}</a></li>
-                            </ul>
-                        </div>
-                        <div class="right">
-                            <ul class="social-share">
-                                <li class="title">Share:</li>
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                            </ul>       
-                        </div>
+<div class="page-content practice-details padding-top-120 padding-bottom-105">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="practice-details-content-area">
+                    <div class="thumb">
+                        <img src="icon.png" alt="practice image">
                     </div>
+                    <div class="content-wrap">
+                        <h4 class="title">{{$data->judul}}</h4>
+                      
+                                <a href="#"><i class="fa fa-calendar" style="color:#2ad4ca"></i> {{$data->tanggal}}</a>
+                                <a href="#"><i class="fa fa-map-marker" style="color:#2ad4ca"></i> {{$data->tempat}}</a>
+                               <br>
+                               <br>
+                  
+                          <p>{{$data->isi}}</p>
+                       </div>
                 </div>
-                <div class="col-lg-4">
+            </div>
+            <div class="col-lg-4">
                     <div class="widget-area">
                         <div class="widget widget_search">
                             <form action="" class="search-form">
@@ -81,11 +66,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
+</div>
 
-    <!-- footer area start -->
     <!-- footer area end -->
 
 
@@ -96,5 +80,4 @@
     </div>
     <!-- back to top area end -->
 
-    <!-- preloader area start -->
-@endsection
+    <!-- preloader area start -->@endsection

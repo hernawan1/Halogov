@@ -21,8 +21,13 @@ Route::get('/mekanisme-tp4d', 'HomeController@mekanisme')->name('mekanisme');
 Route::get('/strukturorganisasi', 'HomeController@struktur')->name('struktur');
 Route::get('/map', 'MapsController@index')->name('map');
 Route::get('/berita', 'BeritaController@index')->name('berita');
-Route::get('/detail-berita', 'BeritaController@detail')->name('detail-berita');
+Route::get('/detail-berita/{id}', 'BeritaController@show')->name('detail-berita');
+Route::get('/event', 'EventController@index')->name('event');
+Route::get('/detail-event/{id}', 'EventController@show')->name('detail-event');
 Route::get('/galeri', 'GaleriController@index')->name('galeri');
+Route::get('/kontak','HomeController@kontak')->name('kontak');
+Route::get('/aplikasi','HomeController@aplikasi')->name('aplikasi');
+Route::get('/form-pengajuan','HomeController@form')->name('form-pengajuan');
 Route::get('/login', 'LoginController@login')->name('login');
 
 

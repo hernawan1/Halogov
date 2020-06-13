@@ -5,14 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use DB;
+
 class BeritaController extends Controller
 {
     public function index(){
-        $berita = DB::table('berita')->where('tipe','=','ind')->get();
-        return view('user.menu.berita',compact('berita'));
+        $data = DB::table('berita')->where('tipe','=','ind')->get();
+        return view('user.menu.berita',compact('data'));
     }
-    public function detail(){
-        $detailberita = DB::table('berita')->get();
-        return view('user.menu.detailberita');
+    public function show($id){
+        $data = DB::table('berita')->where('id',$id)->first();
+        $recent = DB::table('berita')->where('tipe','=','ind')->limit(2)->inRandomOrder()->get();
+        return view('user.menu.detailberita',compact('data','recent'));
     }
+    
 }

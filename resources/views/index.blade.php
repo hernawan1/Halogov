@@ -45,7 +45,14 @@
     @yield('map')
     @yield('berita')
     @yield('detail-berita')
+    @yield('event')
+    @yield('detail-event')
     @yield('galeri')
+    @yield('aplikasi')
+    @yield('kontak')
+    @yield('form-pengajuan')
+
+   
     <!-- footer area start -->
     <footer class="footer-area">
         @include('user.footer')

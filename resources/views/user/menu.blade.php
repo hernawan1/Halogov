@@ -44,11 +44,11 @@
                             </ul>
                         </li>
                         <li><a href="{{route('map')}}">Map TP4D</a></li>
-                        <li><a href="berita">Berita</a></li>
-                        <li><a href="galeri">Galeri</a></li>
-                        <li><a href=">event">Event</a></li>
-                        <li><a href="aplikasi">Aplikasi TP4D</a></li>
-                        <li><a href="kontak">Kontak</a></li>
+                        <li><a href="{{route('berita')}}">Berita</a></li>
+                        <li><a href="{{route('galeri')}}">Galeri</a></li>
+                        <li><a href="{{route('event')}}">Event</a></li>
+                        <li><a href="{{route('aplikasi')}}">Aplikasi TP4D</a></li>
+                        <li><a href="{{route('kontak')}}">Kontak</a></li>
                     </ul>
                 </div>
             </div>

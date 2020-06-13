@@ -23,11 +23,11 @@
     <div class="page-content our-attoryney padding-120">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
-                @foreach($berita as $b)
+                <div class="col-lg-12">
+                @foreach($data as $b)
                     <div class="blog-classic-item-01 margin-bottom-30 is-sticky">
                         <div class="thumbnail">
-                            <img src="icon.png" alt="blog">
+                            <img src="{{ asset('images/'.$b->gambar) }}" alt="blog">
                         </div>
                         <div class="content">
                             <h4 class="title"><a href="#">{{$b->judul}}</a></h4>
@@ -38,33 +38,13 @@
                             </ul>
                             <p>{{$b->isi}}
                             </p>
-                            <a href="detail-berita" class="readmore">Read More</a>
+                            <a href="detail-berita/{{$b->id}}" class="readmore">Read More</a>
                         </div>
                               
                     </div>
                @endforeach
                 </div>
-                <div class="col-lg-4">
-                    <div class="widget-area">
-                        <div class="widget widget_recent_posts">
-                            <h4 class="widget-title">Recent Post</h4>
-                            <ul class="recent_post_item">
-                            @foreach($berita as $b)
-                                <li class="single-recent-post-item">
-                                    <div class="thumb">
-                                        <img src="icon.png"  alt="recent post">
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title"><a href="detail-berita">{{$b->judul}}</a></h4>
-                                        <span class="time"><i class="fa fa-calendar"></i>{{$b->tanggal}}</span>
-                                    </div>
-                                </li>
-                            @endforeach
-                            </ul>
-                        </div>
-                        
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>

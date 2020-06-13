@@ -39,9 +39,29 @@ class HomeController extends Controller
     {
         return view('user.menu.detailberita');
     }
+    public function event()
+    {
+        return view('user.menu.event');
+    }
+    public function detailevent()
+    {
+        return view('user.menu.detailevent');
+    }
     public function galeri()
     {
         return view('user.menu.galeri');
+    }
+    public function aplikasi()
+    {
+        return view('user.menu.aplikasi');
+    }
+    public function kontak()
+    {
+        return view('user.menu.kontak');
+    }
+    public function form()
+    {
+        return view('user.menu.formpengajuan');
     }
     /**
      * Show the application dashboard.

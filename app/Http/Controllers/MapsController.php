@@ -19,7 +19,9 @@ class MapsController extends Controller
             $marker[$i]=[$lpr->lat,$lpr->lng];
             $i++;
         }
-        // return $marker;
+        
+       
+        return $marker;       
         return view('user.menu.map', ['lpr'=>$marker]);
     }
 }
