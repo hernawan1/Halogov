@@ -55,7 +55,7 @@ height: 1000px;
 // The maximum width of the info window is set to 200 pixels.
 function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
+          zoom: 20,
           // -7.0777326!4d113.287085
           center: {lat: -7.0777326, lng: 113.287085}
         });
@@ -121,5 +121,4 @@ function initMap() {
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAENypRbRWuuk8K18OvYOlupreDWpGvBWY&callback=initMap">
     </script>
-
 @endsection

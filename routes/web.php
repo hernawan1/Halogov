@@ -31,8 +31,18 @@ Route::get('/form-pengajuan','HomeController@form')->name('form-pengajuan');
 Route::get('/login', 'LoginController@login')->name('login');
 
 
+
 //Admin
 Route::get('/admin/beranda', 'AdminController@index')->name('beranda');
+Route::get('/admin/formtp4d', 'MapsController@maps')->name('formtp4d');
+Route::get('/admin/mapsall', 'MapsController@viewmaps')->name('viewmaps');
+Route::get('/admin/tabeltp4d', 'MapsController@tabelmaps')->name('tabelmaps');
+Route::get('/admin/LokasiTP4D/{id}','MapsController@routemaps')->name('lokasitp4d');
+Route::get('/admin/viewmapall', 'MapsController@viewmaps')->name('viewmapsall');
+Route::post('/admin/addtp4d', [
+    'uses' => 'MapsController@create',
+    'as' => 'tp4d.tambah'
+]);
 Route::get('/firebase', 'FirebaseController@index')->name('coba');
 
 
