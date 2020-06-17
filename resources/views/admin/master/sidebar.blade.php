@@ -37,11 +37,11 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="admin/about-us"><i class="fa fa-circle-o"></i> About Us</a></li>
-                    <li><a href="admin/our-team"><i class="fa fa-circle-o"></i> Team </a></li>
+                    <li><a href="{{route('team')}}"><i class="fa fa-circle-o"></i> Team </a></li>
                 </ul>
             </li>
             <li class="">
-                <a href="admin/berita"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Berita</a>
+                <a href="{{route('berita')}}"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Berita</a>
                 </a>
             </li>
             <li class="treeview">
@@ -70,8 +70,8 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="admin/galeri"><i class="fa fa-circle-o"></i> Foto</a></li>
-                    <li><a href="admin/video"><i class="fa fa-circle-o"></i>Video</a></li>
+                    <li><a href="{{route('foto')}}"><i class="fa fa-circle-o"></i> Foto</a></li>
+                    <li><a href="{{route('video')}}"><i class="fa fa-circle-o"></i>Video</a></li>
                 </ul>
             </li>
 

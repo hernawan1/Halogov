@@ -37,7 +37,7 @@
                             <div class="col-lg-4 col-md-6 case-masonry-03  criminal">
                                 <div class="single-case-item-02">
                                     <div class="thumb">
-                                        <img src="icon.png" alt="recent case">
+                                        <img src="{{ asset('images/'.$g->nama) }}" alt="recent case">
                                         <div class="hover">
                                         <h4 class="title"><a href="#">{{$g->deskripsi}}</a></h4>
                                         </div>

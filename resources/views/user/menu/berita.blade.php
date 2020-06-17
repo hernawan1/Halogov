@@ -32,11 +32,11 @@
                         <div class="content">
                             <h4 class="title"><a href="#">{{$b->judul}}</a></h4>
                             <ul class="post-meta">
-                                <li><a href="#"><i class="fa fa-calendar"></i>{{$b->tanggal}}</a></li>
+                                <li><a href="#"><i class="fa fa-calendar"></i>  {{$b->tanggal}}</a></li>
                                 <li><a href="#"><i class="fa fa-user"></i> {{$b->admin_posting}}</a></li>
                                
                             </ul>
-                            <p>{{$b->isi}}
+                            <p>{{substr($b->isi,0,100)}}...
                             </p>
                             <a href="detail-berita/{{$b->id}}" class="readmore">Read More</a>
                         </div>

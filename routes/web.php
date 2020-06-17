@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+//user
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/home', 'HomeController@home')->name('home');
 Route::get('/mengenal-tp4d', 'HomeController@mengenal')->name('mengenal');
@@ -43,6 +43,23 @@ Route::post('/admin/addtp4d', [
     'uses' => 'MapsController@create',
     'as' => 'tp4d.tambah'
 ]);
+Route::get('/admin/berita', 'BeritaController@berita')->name('berita');
+Route::get('/admin/tambahberita', 'BeritaController@tambahberita')->name('tambah-berita');
+Route::post('/admin/addberita', 'BeritaController@create')->name('addberita');
+Route::get('/admin/hapusberita/{id}', 'BeritaController@destroy')->name('hapusberita');
+Route::get('/admin/editberita/{id}', 'BeritaController@edit')->name('editberita');
+Route::post('/admin/updateberita/{id}', 'BeritaController@update')->name('updateberita');
+Route::get('/admin/foto', 'GaleriController@foto')->name('foto');
+Route::post('/admin/addfoto', 'GaleriController@tambahfoto')->name('addfoto');
+Route::get('/admin/hapusfoto/{id}', 'GaleriController@hapusfoto')->name('hapusfoto');
+Route::post('/admin/editfoto/{id}', 'GaleriController@editfoto')->name('editfoto');
+Route::get('/admin/video', 'GaleriController@video')->name('video');
+Route::post('/admin/addvideo', 'GaleriController@tambahvideo')->name('addvideo');
+Route::get('/admin/hapusvideo/{id}', 'GaleriController@hapusvideo')->name('hapusvideo');
+Route::get('/admin/team', 'TeamController@index')->name('team');
+Route::post('/admin/addteam', 'TeamController@tambahteam')->name('addteam');
+Route::get('/admin/hapusteam/{id}', 'TeamController@destroy')->name('hapusteam');
+Route::post('/admin/editteam/{id}', 'TeamController@update')->name('editteam');
 Route::get('/firebase', 'FirebaseController@index')->name('coba');
 
 

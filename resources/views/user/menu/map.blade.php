@@ -55,7 +55,7 @@ height: 1000px;
 // The maximum width of the info window is set to 200 pixels.
 function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 20,
+          zoom: 10,
           // -7.0777326!4d113.287085
           center: {lat: -7.0777326, lng: 113.287085}
         });
@@ -76,7 +76,16 @@ function initMap() {
             map: map,
             icon: 'icon.png',
             shape: shape,
+            animation: google.maps.Animation.BOUNCE,
           });
+          marker.addListener('click', toggleBounce);
+        }
+        function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
         }
       }
      

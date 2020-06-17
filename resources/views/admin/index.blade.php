@@ -111,6 +111,12 @@
             @yield('maptp4d')
             @yield('tabeltp4d')
             @yield('loktp4d')
+            @yield('berita')
+            @yield('tambah-berita')
+            @yield('edit-berita')
+            @yield('foto')
+            @yield('video')
+            @yield('team')
         </div>
 
         <footer class="main-footer">
@@ -217,7 +223,8 @@
                 console.error( error );
             } );
    </script> -->
-<script src="https://cdn.ckeditor.com/4.11.4/standard-all/ckeditor.js"></script>
+   <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+ 
 <!-- Ckeditor -->
 <!-- <script> -->
 
