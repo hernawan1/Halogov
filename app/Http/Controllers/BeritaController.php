@@ -52,81 +52,90 @@ class BeritaController extends Controller
         //SET HEADERNYA
         @header('Content-type: text/html; charset=utf-8'); 
         return $response;
+        }
+        
     }
-    
-}
-public function create(Request $request)
-{
-
-
-        $image = $request->file('image');
-
-        $new_name = rand() . '.' . $image->getClientOriginalExtension();
-
-        $image->move(public_path('images'), $new_name);
-
-        $berita = new \App\Berita;
-        $berita->tanggal = $request->tanggal;
-        $berita->kategori = $request->kategori;
-        $berita->judul = $request->judul;
-        $berita->isi = $request->isi;
-        $berita->gambar = $new_name;
-        $berita->tipe = $request->tipe;
-        $berita->admin_posting = $request->admin_posting;
-        $berita->save();
-        Alert::success('Tambah Berita Berhasil', 'Sukses');
-        return redirect()->route('berita');
-}
-public function destroy($id)
+    public function create(Request $request)
     {
-        $gambar =  DB::table('berita')->where('id',$id)->first();
-	    File::delete('images/'.$gambar->gambar);
-        DB::table('berita')->where('id',$id)->delete();
-        return redirect()->route('berita');
-    
-    }
-public function edit($id){
-    $data = DB::table('berita')->where('id',$id)->get();
-    return view('admin.menu.editberita',['data'=>$data]);
-}
-public function update(Request $request)
-{
+            $image = $request->file('image');
 
-    
-    $image = $request->file('image');
-    if($image!=null){
-        $new_name = rand() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images'), $new_name);
-        $gambar =  DB::table('berita')->where('id',$request->id)->first();
-        File::delete('images/'.$gambar->gambar);
-    $form_data = array(
-        
-      
-      'tanggal'         => $request->tanggal,
-      'kategori'        => $request->kategori,
-      'judul'           => $request->judul,
-      'isi'             => $request->isi,
-      'gambar'          => $new_name,
-      'tipe'            => $request->tipe,
-      'admin_posting'   => $request->admin_posting,
-    );
-    
-    DB::table('berita')->where('id',$request->id)->update($form_data);
- 
-    return redirect()->route('berita')->with(['success' => 'Data is successfully updated']);}
-    else{
-        $form_data = array(
-        
-      
-            'tanggal'         => $request->tanggal,
-            'kategori'        => $request->kategori,
-            'judul'           => $request->judul,
-            'isi'             => $request->isi,
-            'tipe'            => $request->tipe,
-            'admin_posting'   => $request->admin_posting,
-          );
-          DB::table('berita')->where('id',$request->id)->update($form_data);
-          return redirect()->route('berita')->with(['success' => 'Data is successfully updated']);
+            $new_name = rand() . '.' . $image->getClientOriginalExtension();
+
+            $image->move(public_path('images'), $new_name);
+
+            $berita = new \App\Berita;
+            $berita->tanggal = $request->tanggal;
+            $berita->kategori = $request->kategori;
+            $berita->judul = $request->judul;
+            $berita->isi = $request->isi;
+            $berita->gambar = $new_name;
+            $berita->tipe = $request->tipe;
+            $berita->admin_posting = $request->admin_posting;
+            $berita->save();
+            Alert::success('Tambah Berita Berhasil', 'Sukses');
+            return redirect()->route('berita');
     }
-}
+    public function destroy($id)
+        {
+            $gambar =  DB::table('berita')->where('id',$id)->first();
+            File::delete('images/'.$gambar->gambar);
+            DB::table('berita')->where('id',$id)->delete();
+            return redirect()->route('berita');
+        
+        }
+    public function edit($id){
+        $data = DB::table('berita')->where('id',$id)->get();
+        return view('admin.menu.editberita',['data'=>$data]);
+    }
+    public function update(Request $request)
+    {
+        $image = $request->file('image');
+        if($image!=null){
+            $new_name = rand() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $new_name);
+            $gambar =  DB::table('berita')->where('id',$request->id)->first();
+            File::delete('images/'.$gambar->gambar);
+        $form_data = array(
+            
+        
+        'tanggal'         => $request->tanggal,
+        'kategori'        => $request->kategori,
+        'judul'           => $request->judul,
+        'isi'             => $request->isi,
+        'gambar'          => $new_name,
+        'tipe'            => $request->tipe,
+        'admin_posting'   => $request->admin_posting,
+        );
+        
+        DB::table('berita')->where('id',$request->id)->update($form_data);
+    
+        return redirect()->route('berita')->with(['success' => 'Data is successfully updated']);}
+        else{
+            $form_data = array(
+            
+        
+                'tanggal'         => $request->tanggal,
+                'kategori'        => $request->kategori,
+                'judul'           => $request->judul,
+                'isi'             => $request->isi,
+                'tipe'            => $request->tipe,
+                'admin_posting'   => $request->admin_posting,
+            );
+            DB::table('berita')->where('id',$request->id)->update($form_data);
+            return redirect()->route('berita')->with(['success' => 'Data is successfully updated']);
+        }
+    }
+    public function showhome(){
+    $beritahome = \App\Berita::paginate(3);
+    return response()->json($beritahome);
+    }
+    public function showslider(){
+        $beritaslide = \App\Berita::paginate(5);
+        return response()->json($beritaslide);
+    }
+    public function showall()
+    {
+        $beritall = \App\Berita::all();
+        return response()->json($beritall);
+    }
 }

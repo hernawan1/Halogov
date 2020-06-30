@@ -85,6 +85,7 @@
                                         </div>
                                     </div>
                                 </tr>
+                                <?php $x++; ?>
                                 @endforeach
                             </tbody>
                             <tfoot>

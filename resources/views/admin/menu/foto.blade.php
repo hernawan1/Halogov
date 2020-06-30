@@ -24,7 +24,7 @@
             <li><a href="home"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active"></li>
         </ol>
-    </section>
+</section>
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
@@ -71,8 +71,7 @@
                                                     <div class="box-body">
                                                         <div class="form-group">
                                                             <label>Deskripsi Gambar</label>
-                                                            <input type="text" class="form-control" id="exampleFormControlInput1" name="deskripsi" value="{{$d->deskripsi}}" >
-                                                        
+                                                            <input type="text" class="form-control" id="exampleFormControlInput1" name="deskripsi" value="{{$d->deskripsi}}" >     
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Gambar</label>
@@ -99,7 +98,6 @@
                                                 <div class="modal-header">
                                                 <h4 class="modal-title">Konfirmasi</h4>
                                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                    
                                                 </div>
                                                 <div class="modal-body">
                                                     <a align="center" style="margin:0; font-size:20px;">Anda Yakin Ingin Menghapus Data Ini?</a>
@@ -113,6 +111,7 @@
                                     </div>
                                     
                                 </tr>
+                                <?php $x++; ?>
                                 @endforeach
                             </tbody>
                             <tfoot>

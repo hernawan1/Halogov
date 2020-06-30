@@ -62,5 +62,21 @@ Route::get('/admin/hapusteam/{id}', 'TeamController@destroy')->name('hapusteam')
 Route::post('/admin/editteam/{id}', 'TeamController@update')->name('editteam');
 Route::get('/firebase', 'FirebaseController@index')->name('coba');
 
+//Intelejen
+Route::get('/intelejen/ormas', 'IntelejenController@ormas')->name('ormas');
+Route::post('/admin/tambahormas', 'IntelejenController@addormas')->name('addormas');
+Route::get('/admin/agama', 'IntelejenController@agama')->name('agama');
+Route::post('/admin/berkas', 'IntelejenController@addberkas')->name('addberkas');
+Route::get('/admin/layanankejaksaan', 'LayananKejaksaanController@layanankejaksaan')->name('layanankejaksaan');
+Route::post('/admin/addtilang', 'LayananKejaksaanController@addtilang')->name('addtilang');
+Route::get('/admin/antartilang','LayananKejaksaanController@pageantartilang')->name('pageantartilang');
+Route::post('/antar/{id}','LayananKejaksaanController@actionantar')->name('actionantar');
+Route::post('/edit/{id}','LayananKejaksaanController@editlayanan')->name('editlay');
+Route::post('/editormas/{id}',  'IntelejenController@editormas')->name('editormas');
+Route::get('/hapusormas/{id}', 'IntelejenController@hapusormas')->name('hapusormas');
 
+//Coba
+Route::get('/test', 'layananKejaksaanController@pagetilang')->name('test');
+Route::get('/coba', 'LayananKejaksaanController@cektilangweb')->name('coba');
+Route::post('/coba2','LayananKejaksaanController@antartilang')->name('coba2');
 

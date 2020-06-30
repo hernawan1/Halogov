@@ -10,7 +10,7 @@
                                 </ul>
                             </div>
                             <div class="right-contnet">
-                                <a class="boxed-btn" href="form-pengajuan">Form Permohonan Tp4d</a>
+                                <a class="boxed-btn" href="form-pengajuan">Ambil Tilang</a>
                             </div>
                         </div>
                     </div>

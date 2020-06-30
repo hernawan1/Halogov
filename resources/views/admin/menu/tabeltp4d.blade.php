@@ -60,6 +60,7 @@
                                                 Lokasi</button></a>
                                     </td>
                                 </tr>
+                                <?php $x++; ?>
                                 @endforeach
                             </tbody>
                             <tfoot>

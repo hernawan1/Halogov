@@ -7,10 +7,22 @@
     <title>Admin HaloGoverment</title>
 
     <!-- GALERI -->
+    <style>
+        .content-wrapper {
+            min-height: 100%;
+            background-color: #ffff;
+            z-index: 800;
+        }
+
+    </style>
 
     <link rel="stylesheet" href="../includes/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="{{asset('includes/css/open-iconic-bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('includes/css/animate.css')}}">
@@ -117,6 +129,9 @@
             @yield('foto')
             @yield('video')
             @yield('team')
+            @yield('ormas')
+            @yield('layanankejaksaan')
+            @yield('antartilang')
         </div>
 
         <footer class="main-footer">
@@ -223,8 +238,8 @@
                 console.error( error );
             } );
    </script> -->
-   <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
- 
+<script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+
 <!-- Ckeditor -->
 <!-- <script> -->
 

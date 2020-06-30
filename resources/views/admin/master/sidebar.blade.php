@@ -2,7 +2,7 @@
 <!-- Sidebar user panel -->
 <div class="user-panel">
     <div class="pull-left image">
-        <img src="../images/logo-kejaksaan.png" class="img-circle" alt="User Image">
+        <img src="{{asset('images/logo-kejaksaan.png')}}" class="img-circle" alt="User Image">
     </div>
     <div class="pull-left info">
         <p>Administrator</p>
@@ -19,7 +19,7 @@
             <i class="fa fa-dashboard"></i> <span>Beranda</span>
         </a>
     </li>
-    <li class="treeview">
+    <li class="treeview {{ (request()->is(['intelejen/ormas','admin/layanankejaksaan'])) ? 'active' : '' }}">
         <a href="#">
             <i class="fa fa-user-secret" aria-hidden="true"></i> <span>Inteljen</span>
             <span class="pull-right-container">
@@ -54,10 +54,8 @@
                 <ul class="treeview-menu">
                     <li><a href="admin/about-us"><i class="fa fa-circle-o"></i>PAKEM</a></li>
                     <li><a href="admin/our-team"><i class="fa fa-circle-o"></i>GAKKUMDU</a></li>
-                    <li><a href="admin/about-us"><i class="fa fa-circle-o"></i>Layanan Kejaksaan</a></li>
-                    <li><a href="admin/our-team"><i class="fa fa-circle-o"></i>ORMAS</a></li>
-                    <li><a href="admin/about-us"><i class="fa fa-circle-o"></i>Jaksa Masuk Sekolah</a></li>
-                    <li><a href="admin/our-team"><i class="fa fa-circle-o"></i>Jaksa Menyapa</a></li>
+                    <li><a href="{{route('layanankejaksaan')}}"><i class="fa fa-circle-o"></i>Layanan Kejaksaan</a></li>
+                    <li><a href="{{route('ormas')}}"><i class="fa fa-circle-o"></i>ORMAS</a></li>
                     <li><a href="admin/our-team"><i class="fa fa-circle-o"></i>Layanan Hukum</a></li>
                 </ul>
             </li>

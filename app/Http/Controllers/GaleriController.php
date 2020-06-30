@@ -82,6 +82,7 @@ class GaleriController extends Controller
         $link= $request->link;
         $yt = str_replace("https://youtu.be/","https://www.youtube.com/embed/",$link);
         $galeri->deskripsi = $request->deskripsi;
+        $galeri->kategori = $request->kategori;
         $galeri->nama= $yt;
         $galeri->tipe= $request->tipe;
         $galeri->save();
